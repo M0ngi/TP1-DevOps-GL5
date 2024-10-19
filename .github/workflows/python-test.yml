@@ -1,0 +1,38 @@
+name: Run Pytest on Pull Request
+
+on:
+  pull_request:
+    branches:
+      - "**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11" # Specify the Python version you are using
+
+      # Install Poetry
+      - name: Install Poetry
+        run: |
+          python3 -m venv /opt/poetry
+          /opt/poetry/bin/pip install -U pip setuptools \
+          /opt/poetry/bin/pip install poetry==1.7.1
+
+      # Install dependencies using Poetry
+      - name: Install dependencies
+        run: |
+          poetry install
+
+      # Run pytest with Poetry
+      - name: Run tests
+        run: |
+          poetry run pytest
