@@ -31,9 +31,9 @@ jobs:
       # Install dependencies using Poetry
       - name: Install dependencies
         run: |
-          poetry install
+          /opt/poetry-venv/bin/poetry install
 
       # Run pytest with Poetry
       - name: Run tests
         run: |
-          poetry run pytest
+          /opt/poetry-venv/bin/poetry run pytest
