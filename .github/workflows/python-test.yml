@@ -23,9 +23,8 @@ jobs:
       # Install Poetry
       - name: Install Poetry
         run: |
-          python3 -m venv /opt/poetry
-          /opt/poetry/bin/pip install -U pip setuptools
-          /opt/poetry/bin/pip install poetry==1.7.1
+          python -m pip install --upgrade pip
+          pip install poetry==1.7.1
 
       # Install dependencies using Poetry
       - name: Install dependencies
