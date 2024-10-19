@@ -26,14 +26,13 @@ jobs:
           python3 -m venv /opt/poetry
           /opt/poetry/bin/pip install -U pip setuptools
           /opt/poetry/bin/pip install poetry==1.7.1
-          echo /opt/poetry-venv/bin >> $GITHUB_PATH
 
       # Install dependencies using Poetry
       - name: Install dependencies
         run: |
-          poetry install
+          /opt/poetry-venv/bin/poetry install
 
       # Run pytest with Poetry
       - name: Run tests
         run: |
-          poetry run pytest
+          /opt/poetry-venv/bin/poetry run pytest
