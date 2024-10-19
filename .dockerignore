@@ -1,0 +1,18 @@
+# dev
+__generated__
+__pycache__
+.pytest_cache
+coverage
+coverage.*
+!coverage.py
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.env
+.mypy_cache
+.pytest_cache
+.coverage*
+poetry.lock
+
