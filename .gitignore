@@ -2,94 +2,17 @@
 __generated__
 __pycache__
 .pytest_cache
-.tmp
-.venv
-*.egg-info
-*.prof
-*.swp
 coverage
 coverage.*
-!coverage.ts
 !coverage.py
-
-# Yarn
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-
-# Turbo
-.turbo
-
-# CLI assets
-_stats/
-_diagnostic/
-escape-lock.json
-escape-security-report.json
-escape-security-report.md
-crash_report.txt
-result.json
-subfinder
-.stats
-raw_introspection.json
-
-# Svelte
-.svelte-kit/
-
 
 # Python
 __pycache__/
-*.egg-info/
-.ipynb_checkpoints
 *.pyc
 *.pyo
 *.env
 .mypy_cache
 .pytest_cache
 .coverage*
-.venv
-build/
-dist/
-setup.py
-*.spec
-snap
 poetry.lock
 
-# Logs
-logs
-.logs
-*.log.*
-
-# Escape
-.escaperc*.json
-schema*.json
-# The linux version is automatically built in CI (but not macoS)
-bin/linux-x64/escape-scanner
-.raw_spec.json
-!services/**/.env
-!packages/orm/.env
-
-_debug/
-exec_*.prof
-.tmp
-cover.out
-
-.diagnostic/
-.stats/
-escape-lock.json
-escape-security-report.json
-escape-security-report.md
-crash_report.txt
-
-go.work.sum
-go.sum
-
-# Scanner testers and debug file assets
-testers-config
-
-# Developer-specific vscode workspaces
-*.code-workspace
-.testmondata
